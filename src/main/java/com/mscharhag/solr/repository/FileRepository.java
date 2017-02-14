@@ -21,7 +21,7 @@ public interface FileRepository extends SolrCrudRepository<FileIndex, String> {
 	Page<FileIndex> findByNameOrDescription(@Boost(2) String name, String description, Pageable pageable);
 
 	@Query("name:?0")
-	@Facet(fields = { "categories_txt" }, limit = 5)
+	@Facet(fields = { "name" }, limit = 5)
 	FacetPage<FileIndex> findByNameAndFacetOnCategories(String name, Pageable page);
 	
 	@Highlight(prefix = "<highlight>", postfix = "</highlight>")
