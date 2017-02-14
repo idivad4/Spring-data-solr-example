@@ -35,7 +35,7 @@
 	</dependencies>
 
 	<properties>
-		<start-class>com.mscharhag.Application</start-class>
+		<start-class>com.mscharhag.solr.Application</start-class>
 	</properties>
 
 	<build>
